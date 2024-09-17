@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Expo Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Expo Quiz</h1>
+        <div id="intro">
+            <p>Welcome! Take the quiz, test your knowledge, and compete for the top spot! Complete the quiz as quickly as you can!</p>
+            <button id="startQuizBtn">Start Quiz</button>
+        </div>
+        <div class="quiz-container" id="quizContainer">
+            <div id="questionContainer" class="quiz-question"></div>
+            <div id="answersContainer"></div>
+            <p>Time left: <span id="timer">60</span> seconds</p>
+        </div>
+        <div class="result" id="resultContainer">
+            <h3>Your Score: <span id="score"></span></h3>
+            <p>Well done! Enter your details to see the leaderboard.</p>
+            <form id="leaderboardForm">
+                <label for="name">Name: </label><br>
+                <input type="text" id="name" required><br>
+                <label for="yearGroup">Year Group: </label><br>
+                <input type="text" id="yearGroup" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="leaderboard" id="leaderboardContainer">
+            <div class="top-podium" id="topPodium"></div>
+            <div class="user-info" id="topUserInfo"></div>
+        </div>
+    </div>
+    <script type="module" src="firebase.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
